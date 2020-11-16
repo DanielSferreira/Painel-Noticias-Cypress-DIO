@@ -1,0 +1,15 @@
+<form [formGroup]="form" class="form">
+    <div class="input-box">
+        <input class="input-login" type="text" placeholder="Nome" formControlName="nome">
+    </div>
+    <div class="input-box">
+        <input class="input-login" type="email" placeholder="E-mail" formControlName="email">
+    </div>
+    <div class="input-box">
+        <input class="input-login" type="password" placeholder="Senha" formControlName="senha">
+    </div>
+    <mat-card-actions style="text-align: center;">
+      <button type="button" (click)="validForm()" mat-raised-button color="warn"> Alterar</button>
+      <span class="alert" *ngIf="SnackBar">Usuario Alterado</span>
+    </mat-card-actions>
+</form>

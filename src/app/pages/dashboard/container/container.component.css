@@ -1,0 +1,31 @@
+@media(max-width:1200px) {
+  .container {
+    grid-template-areas:
+      "lateral"
+      "central";
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+  }
+}
+
+@media(min-width:1200px) {
+  .container {
+    grid-template-areas: "lateral central ";
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+  }
+}
+
+.container {
+  display: grid;
+}
+
+.central {
+  background-color: burlywood;
+  grid-area: central;
+}
+
+.lateral {
+  background-color: cornsilk;
+  grid-area: lateral;
+}

@@ -3,18 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { FormLoginComponent } from './page/form-login/form-login.component';
+
+import { LoginModule } from "./pages/login/login.module";
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormLoginComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    LoginModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

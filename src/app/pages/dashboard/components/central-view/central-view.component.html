@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngFor="let item of noticias">
+        <app-card-faciliter 
+            title={{item.title}}
+            descricao={{item.descricao}}
+            url={{item.url}}
+        >
+        </app-card-faciliter>
+    </div>
+    
+</div>
