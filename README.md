@@ -4,6 +4,6 @@ Este Projeto é referente ao desafio de pŕojeto da DIO onde faço testes em uma
 
 ## Tecnologias usadas
 
---Cypress
---Angular
---Angular-Material
+  * Cypress
+  * Angular
+  * Angular-Material
