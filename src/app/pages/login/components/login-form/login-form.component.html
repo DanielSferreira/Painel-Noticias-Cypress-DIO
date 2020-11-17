@@ -5,15 +5,15 @@
     </mat-card-header>
     <mat-card-content>
       <div class="input-box">
-        <input class="input-login" type="text" placeholder="E-mail" formControlName="email">
+        <input name="email" class="input-login" type="email" placeholder="E-mail" formControlName="email">
       </div>
       <div class="input-box">
-        <input class="input-login" type="password" placeholder="Senha" formControlName="senha">
+        <input name="senha" class="input-login" type="password" placeholder="Senha" formControlName="senha">
       </div>
     </mat-card-content>
     <mat-card-actions style="text-align: center;">
-      <button type="button" (click)="submit()" mat-raised-button color="warn"> Entrar</button>
-      <span class="alert" *ngIf="errorSnackBar">Usuario ou a senha estão invalidos</span>
+      <button type="button" name="submit" (click)="submit()" mat-raised-button color="warn"> Entrar</button>
+      <span name="alert" class="alert" *ngIf="errorSnackBar">Usuario ou a senha estão invalidos</span>
     </mat-card-actions>
 
   </form>

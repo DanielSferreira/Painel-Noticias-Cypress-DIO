@@ -35,16 +35,9 @@ export class LoginFormComponent {
 
   invalidForm():void 
   {
+    this.errorSnackBar = true;
     this.form.controls["email"].setValue("");
     this.form.controls["senha"].setValue("");
-    this.showError();
-  }
-  showError():void
-  {
-    this.errorSnackBar = true;
-    setTimeout(() => {
-      this.errorSnackBar = false
-    }, 3000);
   }
   errorSnackBar = false
 

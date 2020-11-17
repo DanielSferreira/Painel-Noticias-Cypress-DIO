@@ -9,8 +9,8 @@
     <div class="input-box">
         <input class="input-login" type="password" placeholder="Senha" formControlName="senha">
     </div>
-    <mat-card-actions style="text-align: center;">
-      <button type="button" (click)="validForm()" mat-raised-button color="warn"> Alterar</button>
-      <span class="alert" *ngIf="SnackBar">Usuario Alterado</span>
+    <mat-card-actions style="display: block; text-align: center;">
+        <button type="button" (click)="validForm()" mat-raised-button color="warn"> Alterar</button>
+        <span class="alert" *ngIf="SnackBar">Usuario Alterado</span>
     </mat-card-actions>
 </form>
