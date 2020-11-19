@@ -7,24 +7,15 @@ context('Login', () => {
 
     it('sucesso no login', () => {
         cy.get('form').within(($form) => {
-
-            cy.get('input[name="email"]').type('daniel6991ferreira@gmail.com');
-            cy.get('input[name="senha"]').type('123456');
-            cy.get('button[name="submit"]').click()
-
+            cy.login("daniel6991ferreira@gmail.com","123456");
             cy.url('include', '/home');
         });
     });
     
     it('conferir o erro ao logar', () => {
-
-        cy.visit("http://localhost:4200/");
-        cy.get('input[name="email"]').type('john.doe@email.com');
-        cy.get('input[name="senha"]').type('password');
-        cy.get('button[name="submit"]').click();
-    
+        cy.limparFormLogin();
+        cy.login('john.doe@email.com','123654');
         cy.get('.alert').should("have.text", "Usuario ou a senha estão invalidos");
-    
     });
 
     it('confirmar que é email', () => {

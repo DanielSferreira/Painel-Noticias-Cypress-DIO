@@ -1,16 +1,16 @@
 <form [formGroup]="form" class="form">
     <h2>Alteração de Dados</h2>
     <div class="input-box">
-        <input class="input-login" type="text" placeholder="Nome" formControlName="nome">
+        <input class="input-login" type="text" placeholder="Nome" formControlName="nome" name="nome-edit">
     </div>
     <div class="input-box">
-        <input class="input-login" type="email" placeholder="E-mail" formControlName="email">
+        <input class="input-login" type="email" placeholder="E-mail" formControlName="email" name="email-edit">
     </div>
     <div class="input-box">
-        <input class="input-login" type="password" placeholder="Senha" formControlName="senha">
+        <input class="input-login" type="password" placeholder="Senha" formControlName="senha" name="senha-edit">
     </div>
     <mat-card-actions style="display: block; text-align: center;">
-        <button type="button" (click)="validForm()" mat-raised-button color="warn"> Alterar</button>
+        <button type="button" (click)="validForm()" mat-raised-button color="warn" data-cy="confirmarAlteracao"> Alterar</button>
         <span class="alert" *ngIf="SnackBar">Usuario Alterado</span>
     </mat-card-actions>
 </form>
