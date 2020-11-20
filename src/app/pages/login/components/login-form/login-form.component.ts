@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,8 +11,8 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginFormComponent {
 
   form: FormGroup = new FormGroup({
-    email: new FormControl(""),
-    senha: new FormControl(""),
+    email: new FormControl("", [Validators.required]),
+    senha: new FormControl("", [Validators.required]),
   });
 
   constructor(

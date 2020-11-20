@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -15,9 +15,9 @@ export class CongigsComponent implements OnInit {
     private user: UserService
   ) { }
   form: FormGroup = new FormGroup({
-    nome: new FormControl(""),
-    email: new FormControl(""),
-    senha: new FormControl(""),
+    nome: new FormControl("", [Validators.required]),
+    email: new FormControl("", [Validators.required]),
+    senha: new FormControl("", [Validators.required]),
   });
   ngOnInit(): void {
   }
